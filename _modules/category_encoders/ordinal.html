@@ -150,7 +150,9 @@
 
 
 <div class="viewcode-block" id="OrdinalEncoder"><a class="viewcode-back" href="../../ordinal.html#category_encoders.ordinal.OrdinalEncoder">[docs]</a><span class="k">class</span> <span class="nc">OrdinalEncoder</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Ordinal encoding uses a single column of integers to represent the classes. An optional mapping dict can be passed</span>
+    <span class="sd">&quot;&quot;&quot;Encodes categorical features as ordinal, in one ordered feature</span>
+
+<span class="sd">    Ordinal encoding uses a single column of integers to represent the classes. An optional mapping dict can be passed</span>
 <span class="sd">    in, in this case we use the knowledge that there is some true order to the classes themselves. Otherwise, the classes</span>
 <span class="sd">    are assumed to have no true order and integers are selected at random.</span>
 
@@ -172,12 +174,35 @@
 
 <span class="sd">    Example</span>
 <span class="sd">    -------</span>
-<span class="sd">    &gt;&gt;&gt; from category_encoders import OrdinalEncoder</span>
-<span class="sd">    &gt;&gt;&gt; from sklearn.datasets import fetch_20newsgroups_vectorized</span>
-<span class="sd">    &gt;&gt;&gt; bunch = fetch_20newsgroups_vectorized(subset=&quot;all&quot;)</span>
-<span class="sd">    &gt;&gt;&gt; X, y = bunch.data, bunch.target</span>
-<span class="sd">    &gt;&gt;&gt; enc = OrdinalEncoder(return_df=False).fit(X, y)</span>
-<span class="sd">    &gt;&gt;&gt; numeric_dataset = enc.transform(X)</span>
+<span class="sd">    &gt;&gt;&gt;from category_encoders import *</span>
+<span class="sd">    &gt;&gt;&gt;import pandas as pd</span>
+<span class="sd">    &gt;&gt;&gt;from sklearn.datasets import load_boston</span>
+<span class="sd">    &gt;&gt;&gt;bunch = load_boston()</span>
+<span class="sd">    &gt;&gt;&gt;y = bunch.target</span>
+<span class="sd">    &gt;&gt;&gt;X = pd.DataFrame(bunch.data, columns=bunch.feature_names)</span>
+<span class="sd">    &gt;&gt;&gt;enc = OrdinalEncoder(cols=[&#39;CHAS&#39;, &#39;RAD&#39;]).fit(X, y)</span>
+<span class="sd">    &gt;&gt;&gt;numeric_dataset = enc.transform(X)</span>
+<span class="sd">    &gt;&gt;&gt;print(numeric_dataset.info())</span>
+
+<span class="sd">    &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</span>
+<span class="sd">    RangeIndex: 506 entries, 0 to 505</span>
+<span class="sd">    Data columns (total 13 columns):</span>
+<span class="sd">    CRIM       506 non-null float64</span>
+<span class="sd">    ZN         506 non-null float64</span>
+<span class="sd">    INDUS      506 non-null float64</span>
+<span class="sd">    CHAS       506 non-null int64</span>
+<span class="sd">    NOX        506 non-null float64</span>
+<span class="sd">    RM         506 non-null float64</span>
+<span class="sd">    AGE        506 non-null float64</span>
+<span class="sd">    DIS        506 non-null float64</span>
+<span class="sd">    RAD        506 non-null int64</span>
+<span class="sd">    TAX        506 non-null float64</span>
+<span class="sd">    PTRATIO    506 non-null float64</span>
+<span class="sd">    B          506 non-null float64</span>
+<span class="sd">    LSTAT      506 non-null float64</span>
+<span class="sd">    dtypes: float64(11), int64(2)</span>
+<span class="sd">    memory usage: 51.5 KB</span>
+<span class="sd">    None</span>
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>

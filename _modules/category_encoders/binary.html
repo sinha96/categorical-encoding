@@ -151,7 +151,7 @@
 
 
 <div class="viewcode-block" id="BinaryEncoder"><a class="viewcode-back" href="../../binary.html#category_encoders.binary.BinaryEncoder">[docs]</a><span class="k">class</span> <span class="nc">BinaryEncoder</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Binary encoding for categorical variables, similar to onehot, but stores categories as binary bitstrings.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -167,12 +167,38 @@
 
 <span class="sd">    Example</span>
 <span class="sd">    -------</span>
-<span class="sd">    &gt;&gt;&gt; from category_encoders import BinaryEncoder</span>
-<span class="sd">    &gt;&gt;&gt; from sklearn.datasets import fetch_20newsgroups_vectorized</span>
-<span class="sd">    &gt;&gt;&gt; bunch = fetch_20newsgroups_vectorized(subset=&quot;all&quot;)</span>
-<span class="sd">    &gt;&gt;&gt; X, y = bunch.data, bunch.target</span>
-<span class="sd">    &gt;&gt;&gt; enc = BinaryEncoderr(return_df=False).fit(X, y)</span>
-<span class="sd">    &gt;&gt;&gt; numeric_dataset = enc.transform(X)</span>
+<span class="sd">    &gt;&gt;&gt;from category_encoders import *</span>
+<span class="sd">    &gt;&gt;&gt;import pandas as pd</span>
+<span class="sd">    &gt;&gt;&gt;from sklearn.datasets import load_boston</span>
+<span class="sd">    &gt;&gt;&gt;bunch = load_boston()</span>
+<span class="sd">    &gt;&gt;&gt;y = bunch.target</span>
+<span class="sd">    &gt;&gt;&gt;X = pd.DataFrame(bunch.data, columns=bunch.feature_names)</span>
+<span class="sd">    &gt;&gt;&gt;enc = BinaryEncoder(cols=[&#39;CHAS&#39;, &#39;RAD&#39;]).fit(X, y)</span>
+<span class="sd">    &gt;&gt;&gt;numeric_dataset = enc.transform(X)</span>
+<span class="sd">    &gt;&gt;&gt;print(numeric_dataset.info())</span>
+
+<span class="sd">    &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</span>
+<span class="sd">    RangeIndex: 506 entries, 0 to 505</span>
+<span class="sd">    Data columns (total 16 columns):</span>
+<span class="sd">    CHAS_0     506 non-null int64</span>
+<span class="sd">    RAD_0      506 non-null int64</span>
+<span class="sd">    RAD_1      506 non-null int64</span>
+<span class="sd">    RAD_2      506 non-null int64</span>
+<span class="sd">    RAD_3      506 non-null int64</span>
+<span class="sd">    CRIM       506 non-null float64</span>
+<span class="sd">    ZN         506 non-null float64</span>
+<span class="sd">    INDUS      506 non-null float64</span>
+<span class="sd">    NOX        506 non-null float64</span>
+<span class="sd">    RM         506 non-null float64</span>
+<span class="sd">    AGE        506 non-null float64</span>
+<span class="sd">    DIS        506 non-null float64</span>
+<span class="sd">    TAX        506 non-null float64</span>
+<span class="sd">    PTRATIO    506 non-null float64</span>
+<span class="sd">    B          506 non-null float64</span>
+<span class="sd">    LSTAT      506 non-null float64</span>
+<span class="sd">    dtypes: float64(11), int64(5)</span>
+<span class="sd">    memory usage: 63.3 KB</span>
+<span class="sd">    None</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_invariant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>

@@ -150,7 +150,7 @@
 
 
 <div class="viewcode-block" id="SumEncoder"><a class="viewcode-back" href="../../sum.html#category_encoders.sum_coding.SumEncoder">[docs]</a><span class="k">class</span> <span class="nc">SumEncoder</span><span class="p">(</span><span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+    <span class="sd">&quot;&quot;&quot;Sum contrast coding for the encoding of categorical features</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -166,12 +166,44 @@
 
 <span class="sd">    Example</span>
 <span class="sd">    -------</span>
-<span class="sd">    &gt;&gt;&gt; from category_encoders import SumEncoder</span>
-<span class="sd">    &gt;&gt;&gt; from sklearn.datasets import fetch_20newsgroups_vectorized</span>
-<span class="sd">    &gt;&gt;&gt; bunch = fetch_20newsgroups_vectorized(subset=&quot;all&quot;)</span>
-<span class="sd">    &gt;&gt;&gt; X, y = bunch.data, bunch.target</span>
-<span class="sd">    &gt;&gt;&gt; enc = SumEncoder(return_df=False).fit(X, y)</span>
-<span class="sd">    &gt;&gt;&gt; numeric_dataset = enc.transform(X)</span>
+<span class="sd">    &gt;&gt;&gt;from category_encoders import *</span>
+<span class="sd">    &gt;&gt;&gt;import pandas as pd</span>
+<span class="sd">    &gt;&gt;&gt;from sklearn.datasets import load_boston</span>
+<span class="sd">    &gt;&gt;&gt;bunch = load_boston()</span>
+<span class="sd">    &gt;&gt;&gt;y = bunch.target</span>
+<span class="sd">    &gt;&gt;&gt;X = pd.DataFrame(bunch.data, columns=bunch.feature_names)</span>
+<span class="sd">    &gt;&gt;&gt;enc = SumEncoder(cols=[&#39;CHAS&#39;, &#39;RAD&#39;]).fit(X, y)</span>
+<span class="sd">    &gt;&gt;&gt;numeric_dataset = enc.transform(X)</span>
+<span class="sd">    &gt;&gt;&gt;print(numeric_dataset.info())</span>
+
+<span class="sd">    &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;</span>
+<span class="sd">    RangeIndex: 506 entries, 0 to 505</span>
+<span class="sd">    Data columns (total 22 columns):</span>
+<span class="sd">    col_CHAS_0     506 non-null float64</span>
+<span class="sd">    col_CHAS_1     506 non-null float64</span>
+<span class="sd">    col_RAD_0      506 non-null float64</span>
+<span class="sd">    col_RAD_1      506 non-null float64</span>
+<span class="sd">    col_RAD_2      506 non-null float64</span>
+<span class="sd">    col_RAD_3      506 non-null float64</span>
+<span class="sd">    col_RAD_4      506 non-null float64</span>
+<span class="sd">    col_RAD_5      506 non-null float64</span>
+<span class="sd">    col_RAD_6      506 non-null float64</span>
+<span class="sd">    col_RAD_7      506 non-null float64</span>
+<span class="sd">    col_RAD_8      506 non-null float64</span>
+<span class="sd">    col_CRIM       506 non-null float64</span>
+<span class="sd">    col_ZN         506 non-null float64</span>
+<span class="sd">    col_INDUS      506 non-null float64</span>
+<span class="sd">    col_NOX        506 non-null float64</span>
+<span class="sd">    col_RM         506 non-null float64</span>
+<span class="sd">    col_AGE        506 non-null float64</span>
+<span class="sd">    col_DIS        506 non-null float64</span>
+<span class="sd">    col_TAX        506 non-null float64</span>
+<span class="sd">    col_PTRATIO    506 non-null float64</span>
+<span class="sd">    col_B          506 non-null float64</span>
+<span class="sd">    col_LSTAT      506 non-null float64</span>
+<span class="sd">    dtypes: float64(22)</span>
+<span class="sd">    memory usage: 87.0 KB</span>
+<span class="sd">    None</span>
 
 <span class="sd">    References</span>
 <span class="sd">    ----------</span>
