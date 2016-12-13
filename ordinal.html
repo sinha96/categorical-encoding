@@ -127,7 +127,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/ordinal.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/ordinal.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -141,7 +141,7 @@
 <h1>Ordinal<a class="headerlink" href="#ordinal" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="category_encoders.ordinal.OrdinalEncoder">
-<em class="property">class </em><code class="descclassname">category_encoders.ordinal.</code><code class="descname">OrdinalEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>mapping=None</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>impute_missing=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/ordinal.html#OrdinalEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.ordinal.OrdinalEncoder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">category_encoders.ordinal.</code><code class="descname">OrdinalEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>mapping=None</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/ordinal.html#OrdinalEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.ordinal.OrdinalEncoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Encodes categorical features as ordinal, in one ordered feature</p>
 <p>Ordinal encoding uses a single column of integers to represent the classes. An optional mapping dict can be passed
 in, in this case we use the knowledge that there is some true order to the classes themselves. Otherwise, the classes
@@ -171,8 +171,12 @@ are assumed to have no true order and integers are selected at random.</p>
 <div><p>a mapping of class to label to use for the encoding, optional.</p>
 </div></blockquote>
 <p><strong>impute_missing: bool</strong></p>
+<blockquote>
+<div><p>boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</p>
+</div></blockquote>
+<p><strong>handle_unknown: str</strong></p>
 <blockquote class="last">
-<div><p>will impute missing categories with -1.</p>
+<div><p>options are &#8216;error&#8217;, &#8216;ignore&#8217; and &#8216;impute&#8217;, defaults to &#8216;impute&#8217;, which will impute the category -1</p>
 </div></blockquote>
 </td>
 </tr>
@@ -225,7 +229,7 @@ and n_features is the number of features.</p>
 
 <dl class="staticmethod">
 <dt id="category_encoders.ordinal.OrdinalEncoder.ordinal_encoding">
-<em class="property">static </em><code class="descname">ordinal_encoding</code><span class="sig-paren">(</span><em>X_in</em>, <em>mapping=None</em>, <em>cols=None</em>, <em>impute_missing=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/ordinal.html#OrdinalEncoder.ordinal_encoding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">ordinal_encoding</code><span class="sig-paren">(</span><em>X_in</em>, <em>mapping=None</em>, <em>cols=None</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/ordinal.html#OrdinalEncoder.ordinal_encoding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ordinal encoding uses a single column of integers to represent the classes. An optional mapping dict can be passed
 in, in this case we use the knowledge that there is some true order to the classes themselves. Otherwise, the classes
 are assumed to have no true order and integers are selected at random.</p>

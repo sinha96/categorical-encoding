@@ -127,7 +127,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/onehot.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/onehot.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -141,7 +141,7 @@
 <h1>One Hot<a class="headerlink" href="#one-hot" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="category_encoders.one_hot.OneHotEncoder">
-<em class="property">class </em><code class="descclassname">category_encoders.one_hot.</code><code class="descname">OneHotEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/one_hot.html#OneHotEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.one_hot.OneHotEncoder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">category_encoders.one_hot.</code><code class="descname">OneHotEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/one_hot.html#OneHotEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.one_hot.OneHotEncoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onehot (or dummy) coding for categorical features, produces one feature per category, each binary.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -160,8 +160,18 @@
 <div><p>boolean for whether or not to drop columns with 0 variance</p>
 </div></blockquote>
 <p><strong>return_df: bool</strong></p>
-<blockquote class="last">
+<blockquote>
 <div><p>boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</p>
+</div></blockquote>
+<p><strong>impute_missing: bool</strong></p>
+<blockquote>
+<div><p>boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</p>
+</div></blockquote>
+<p><strong>handle_unknown: str</strong></p>
+<blockquote class="last">
+<div><p>options are &#8216;error&#8217;, &#8216;ignore&#8217; and &#8216;impute&#8217;, defaults to &#8216;impute&#8217;, which will impute the category -1. Warning: if
+impute is used, an extra column will be added in if the transform matrix has unknown categories.  This can causes
+unexpected changes in dimension in some cases.</p>
 </div></blockquote>
 </td>
 </tr>
