@@ -190,6 +190,12 @@
 <span class="sd">        boolean for whether or not to drop columns with 0 variance</span>
 <span class="sd">    return_df: bool</span>
 <span class="sd">        boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</span>
+<span class="sd">    impute_missing: bool</span>
+<span class="sd">        boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</span>
+<span class="sd">    handle_unknown: str</span>
+<span class="sd">        options are &#39;error&#39;, &#39;ignore&#39; and &#39;impute&#39;, defaults to &#39;impute&#39;, which will impute the category -1. Warning: if</span>
+<span class="sd">        impute is used, an extra column will be added in if the transform matrix has unknown categories.  This can causes</span>
+<span class="sd">        unexpected changes in dimension in some cases.</span>
 
 <span class="sd">    Example</span>
 <span class="sd">    -------</span>

@@ -186,8 +186,18 @@
 <div><p>boolean for whether or not to drop columns with 0 variance</p>
 </div></blockquote>
 <p><strong>return_df: bool</strong></p>
-<blockquote class="last">
+<blockquote>
 <div><p>boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</p>
+</div></blockquote>
+<p><strong>impute_missing: bool</strong></p>
+<blockquote>
+<div><p>boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</p>
+</div></blockquote>
+<p><strong>handle_unknown: str</strong></p>
+<blockquote class="last">
+<div><p>options are &#8216;error&#8217;, &#8216;ignore&#8217; and &#8216;impute&#8217;, defaults to &#8216;impute&#8217;, which will impute the category -1. Warning: if
+impute is used, an extra column will be added in if the transform matrix has unknown categories.  This can causes
+unexpected changes in dimension in some cases.</p>
 </div></blockquote>
 </td>
 </tr>
