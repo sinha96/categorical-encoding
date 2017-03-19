@@ -242,11 +242,13 @@
 
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_invariant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_invariant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">impute_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;impute&#39;</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">return_df</span> <span class="o">=</span> <span class="n">return_df</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drop_invariant</span> <span class="o">=</span> <span class="n">drop_invariant</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drop_cols</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">impute_missing</span> <span class="o">=</span> <span class="n">impute_missing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">handle_unknown</span> <span class="o">=</span> <span class="n">handle_unknown</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="o">=</span> <span class="n">cols</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dim</span> <span class="o">=</span> <span class="kc">None</span>
@@ -282,7 +284,12 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="o">=</span> <span class="n">get_obj_cols</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
         <span class="c1"># train an ordinal pre-encoder</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">(</span>
+            <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+            <span class="n">cols</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">,</span>
+            <span class="n">impute_missing</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">impute_missing</span><span class="p">,</span>
+            <span class="n">handle_unknown</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_unknown</span>
+        <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
         <span class="c1"># drop all output columns with 0 variance.</span>

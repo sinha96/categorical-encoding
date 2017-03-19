@@ -167,6 +167,7 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">category_encoders.ordinal</span> <span class="k">import</span> <span class="n">OrdinalEncoder</span>
 <span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="k">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
 <span class="kn">from</span> <span class="nn">patsy.highlevel</span> <span class="k">import</span> <span class="n">dmatrix</span>
 <span class="kn">from</span> <span class="nn">category_encoders.utils</span> <span class="k">import</span> <span class="n">get_obj_cols</span><span class="p">,</span> <span class="n">convert_input</span>
@@ -241,11 +242,13 @@
 
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_invariant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_invariant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">impute_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;impute&#39;</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">return_df</span> <span class="o">=</span> <span class="n">return_df</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drop_invariant</span> <span class="o">=</span> <span class="n">drop_invariant</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drop_cols</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">impute_missing</span> <span class="o">=</span> <span class="n">impute_missing</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">handle_unknown</span> <span class="o">=</span> <span class="n">handle_unknown</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="o">=</span> <span class="n">cols</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_dim</span> <span class="o">=</span> <span class="kc">None</span>
 
@@ -278,6 +281,15 @@
         <span class="c1"># if columns aren&#39;t passed, just use every string column</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">cols</span> <span class="o">=</span> <span class="n">get_obj_cols</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="c1"># train an ordinal pre-encoder</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="n">OrdinalEncoder</span><span class="p">(</span>
+            <span class="n">verbose</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">,</span>
+            <span class="n">cols</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">,</span>
+            <span class="n">impute_missing</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">impute_missing</span><span class="p">,</span>
+            <span class="n">handle_unknown</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_unknown</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
         <span class="c1"># drop all output columns with 0 variance.</span>
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">drop_invariant</span><span class="p">:</span>
@@ -315,6 +327,8 @@
 
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">X</span>
+
+        <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 
         <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">polynomial_coding</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">)</span>
 
