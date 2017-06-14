@@ -167,7 +167,7 @@
 <h1>Hashing<a class="headerlink" href="#hashing" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="category_encoders.hashing.HashingEncoder">
-<em class="property">class </em><code class="descclassname">category_encoders.hashing.</code><code class="descname">HashingEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>n_components=8</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>hash_method='md5'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">category_encoders.hashing.</code><code class="descname">HashingEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>n_components=8</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>hash_method=’md5’</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>A basic multivariate hashing implementation with configurable dimensionality/precision</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -237,7 +237,7 @@ and n_features is the number of features.</p>
 
 <dl class="staticmethod">
 <dt id="category_encoders.hashing.HashingEncoder.hashing_trick">
-<em class="property">static </em><code class="descname">hashing_trick</code><span class="sig-paren">(</span><em>X_in</em>, <em>hashing_method='md5'</em>, <em>N=2</em>, <em>cols=None</em>, <em>make_copy=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder.hashing_trick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">hashing_trick</code><span class="sig-paren">(</span><em>X_in</em>, <em>hashing_method=’md5’</em>, <em>N=2</em>, <em>cols=None</em>, <em>make_copy=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder.hashing_trick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="Permalink to this definition">¶</a></dt>
 <dd><p>A basic hashing implementation with configurable dimensionality/precision</p>
 <p>Performs the hashing trick on a pandas dataframe, <cite>X</cite>, using the hashing method from hashlib
 identified by <cite>hashing_method</cite>.  The number of output dimensions (<cite>N</cite>), and columns to hash (<cite>cols</cite>) are

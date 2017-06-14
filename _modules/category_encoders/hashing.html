@@ -322,8 +322,8 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span></div>
 
-    <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="HashingEncoder.hashing_trick"><a class="viewcode-back" href="../../hashing.html#category_encoders.hashing.HashingEncoder.hashing_trick">[docs]</a>    <span class="k">def</span> <span class="nf">hashing_trick</span><span class="p">(</span><span class="n">X_in</span><span class="p">,</span> <span class="n">hashing_method</span><span class="o">=</span><span class="s1">&#39;md5&#39;</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">make_copy</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="HashingEncoder.hashing_trick"><a class="viewcode-back" href="../../hashing.html#category_encoders.hashing.HashingEncoder.hashing_trick">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">hashing_trick</span><span class="p">(</span><span class="n">X_in</span><span class="p">,</span> <span class="n">hashing_method</span><span class="o">=</span><span class="s1">&#39;md5&#39;</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">make_copy</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;A basic hashing implementation with configurable dimensionality/precision</span>
 
 <span class="sd">        Performs the hashing trick on a pandas dataframe, `X`, using the hashing method from hashlib</span>

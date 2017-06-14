@@ -349,8 +349,8 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span></div>
 
-    <span class="nd">@staticmethod</span>
-<div class="viewcode-block" id="OrdinalEncoder.ordinal_encoding"><a class="viewcode-back" href="../../ordinal.html#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding">[docs]</a>    <span class="k">def</span> <span class="nf">ordinal_encoding</span><span class="p">(</span><span class="n">X_in</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">impute_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;impute&#39;</span><span class="p">):</span>
+<div class="viewcode-block" id="OrdinalEncoder.ordinal_encoding"><a class="viewcode-back" href="../../ordinal.html#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">ordinal_encoding</span><span class="p">(</span><span class="n">X_in</span><span class="p">,</span> <span class="n">mapping</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">impute_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;impute&#39;</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Ordinal encoding uses a single column of integers to represent the classes. An optional mapping dict can be passed</span>
 <span class="sd">        in, in this case we use the knowledge that there is some true order to the classes themselves. Otherwise, the classes</span>
@@ -362,8 +362,8 @@
         <span class="k">if</span> <span class="n">cols</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
             <span class="n">cols</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span>
 
-        <span class="n">mapping_out</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">if</span> <span class="n">mapping</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">mapping_out</span> <span class="o">=</span> <span class="n">mapping</span>
             <span class="k">for</span> <span class="n">switch</span> <span class="ow">in</span> <span class="n">mapping</span><span class="p">:</span>
                 <span class="n">X</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;col&#39;</span><span class="p">))</span> <span class="o">+</span> <span class="s1">&#39;_tmp&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
                 <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mapping&#39;</span><span class="p">):</span>
@@ -383,6 +383,7 @@
                 <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
                     <span class="n">X</span><span class="p">[</span><span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;col&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;col&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
+            <span class="n">mapping_out</span> <span class="o">=</span> <span class="p">[]</span>
             <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
                 <span class="n">categories</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">))</span>
                 <span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">categories</span><span class="p">)</span>
