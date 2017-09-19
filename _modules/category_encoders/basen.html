@@ -246,6 +246,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dim</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">=</span> <span class="n">base</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_encoded_columns</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">digits_per_col</span> <span class="o">=</span> <span class="p">{}</span>
 
 <div class="viewcode-block" id="BaseNEncoder.fit"><a class="viewcode-back" href="../../basen.html#category_encoders.basen.BaseNEncoder.fit">[docs]</a>    <span class="k">def</span> <span class="nf">fit</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Fit encoder according to X and y.</span>
@@ -285,6 +286,9 @@
             <span class="n">handle_unknown</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_unknown</span>
         <span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">cols</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">digits_per_col</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc_required_digits</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
 
         <span class="c1"># do a transform on the training data to get a column list</span>
         <span class="n">X_t</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">override_return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -340,6 +344,15 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">return</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span></div>
 
+    <span class="k">def</span> <span class="nf">calc_required_digits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">col</span><span class="p">):</span>
+        <span class="c1"># figure out how many digits we need to represent the classes present</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">digits</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">digits</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="p">)))</span>
+
+        <span class="k">return</span> <span class="n">digits</span>
+
 <div class="viewcode-block" id="BaseNEncoder.basen_encode"><a class="viewcode-back" href="../../basen.html#category_encoders.basen.BaseNEncoder.basen_encode">[docs]</a>    <span class="k">def</span> <span class="nf">basen_encode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">X_in</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -354,11 +367,8 @@
 
         <span class="n">bin_cols</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
-            <span class="c1"># figure out how many digits we need to represent the classes present</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="n">digits</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="n">digits</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()),</span> <span class="bp">self</span><span class="o">.</span><span class="n">base</span><span class="p">)))</span>
+            <span class="c1"># get how many digits we need to represent the classes present</span>
+            <span class="n">digits</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">calc_required_digits</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">col</span><span class="p">)</span>
 
             <span class="c1"># map the ordinal column into a list of these digits, of length digits</span>
             <span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">col_transform</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">digits</span><span class="p">))</span>
