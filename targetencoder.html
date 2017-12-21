@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Target Encoder &mdash; Category Encoders latest documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Category Encoders latest documentation" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Category Encoders
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                latest
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="backward_difference.html">Backward Difference Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="binary.html">Binary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hashing.html">Hashing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="helmert.html">Helmert Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onehot.html">One Hot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ordinal.html">Ordinal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polynomial.html">Polynomial Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sum.html">Sum Coding</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basen.html">BaseN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leaveoneout.html">Leave One Out</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Category Encoders</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Target Encoder</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/targetencoder.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="target-encoder">
+<h1>Target Encoder<a class="headerlink" href="#target-encoder" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="category_encoders.target_encoder.TargetEncoder">
+<em class="property">class </em><code class="descclassname">category_encoders.target_encoder.</code><code class="descname">TargetEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em>, <em>min_samples_leaf=1</em>, <em>smoothing=1</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/target_encoder.html#TargetEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.target_encoder.TargetEncoder" title="Permalink to this definition">¶</a></dt>
+<dd><p>Target Encode for categorical features. Based on leave one out approach.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>verbose: int</strong></p>
+<blockquote>
+<div><p>integer indicating verbosity of output. 0 for none.</p>
+</div></blockquote>
+<p><strong>cols: list</strong></p>
+<blockquote>
+<div><p>a list of columns to encode, if None, all string columns will be encoded</p>
+</div></blockquote>
+<p><strong>drop_invariant: bool</strong></p>
+<blockquote>
+<div><p>boolean for whether or not to drop columns with 0 variance</p>
+</div></blockquote>
+<p><strong>return_df: bool</strong></p>
+<blockquote>
+<div><p>boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</p>
+</div></blockquote>
+<p><strong>impute_missing: bool</strong></p>
+<blockquote>
+<div><p>boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</p>
+</div></blockquote>
+<p><strong>handle_unknown: str</strong></p>
+<blockquote>
+<div><p>options are ‘error’, ‘ignore’ and ‘impute’, defaults to ‘impute’, which will impute the category -1. Warning: if
+impute is used, an extra column will be added in if the transform matrix has unknown categories.  This can causes
+unexpected changes in dimension in some cases.</p>
+</div></blockquote>
+<p><strong>min_samples_leaf</strong> : int</p>
+<blockquote>
+<div><p>minimum samples to take category average into account</p>
+</div></blockquote>
+<p><strong>smoothing</strong> : int</p>
+<blockquote class="last">
+<div><p>smoothing effect to balance categorical average vs prior</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r3232" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[R3232]</a></td><td>A Preprocessing Scheme for High-Cardinality Categorical Attributes in Classification and Prediction Problems. from</td></tr>
+</tbody>
+</table>
+<p><a class="reference external" href="https://kaggle2.blob.core.windows.net/forum-message-attachments/225952/7441/high%20cardinality%20categoricals.pdf">https://kaggle2.blob.core.windows.net/forum-message-attachments/225952/7441/high%20cardinality%20categoricals.pdf</a>.</p>
+<p class="rubric">Methods</p>
+<dl class="method">
+<dt id="category_encoders.target_encoder.TargetEncoder.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/target_encoder.html#TargetEncoder.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.target_encoder.TargetEncoder.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit encoder according to X and y.
+Parameters
+———-
+X : array-like, shape = [n_samples, n_features]</p>
+<blockquote>
+<div>Training vectors, where n_samples is the number of samples
+and n_features is the number of features.</div></blockquote>
+<dl class="docutils">
+<dt>y <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples]</span></dt>
+<dd>Target values.</dd>
+</dl>
+<dl class="docutils">
+<dt>self <span class="classifier-delimiter">:</span> <span class="classifier">encoder</span></dt>
+<dd>Returns self.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="category_encoders.target_encoder.TargetEncoder.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/target_encoder.html#TargetEncoder.transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.target_encoder.TargetEncoder.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform the transformation to new categorical data.
+Parameters
+———-
+X : array-like, shape = [n_samples, n_features]
+y : array-like, shape = [n_samples] when transform by leave one out</p>
+<blockquote>
+<div>None, when transform withour target infor(such as transform test set)</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : array, shape = [n_samples, n_numeric + N]</p>
+<blockquote class="last">
+<div><p>Transformed values with encoding applied.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Will McGinnis.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'latest',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
