@@ -168,6 +168,7 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">math</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
 <span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="k">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
 <span class="kn">from</span> <span class="nn">category_encoders.ordinal</span> <span class="k">import</span> <span class="n">OrdinalEncoder</span>
 <span class="kn">from</span> <span class="nn">category_encoders.utils</span> <span class="k">import</span> <span class="n">get_obj_cols</span><span class="p">,</span> <span class="n">convert_input</span>
@@ -359,6 +360,8 @@
 <span class="sd">        p: array, the same size of X_in</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;Inverse transform in basen is a currently experimental feature, please be careful&#39;</span><span class="p">)</span>
         <span class="n">X</span> <span class="o">=</span> <span class="n">Xt</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">deep</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
         <span class="c1"># first check the type</span>
