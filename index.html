@@ -100,6 +100,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sum.html">Sum Coding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basen.html">BaseN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="leaveoneout.html">Leave One Out</a></li>
+<li class="toctree-l1"><a class="reference internal" href="targetencoder.html">Target Encoder</a></li>
 </ul>
 
             
@@ -177,6 +178,9 @@ techniques.  Currently implemented are:</p>
 <li>Polynomial Contrast</li>
 <li>Backward Difference Contrast</li>
 <li>Hashing</li>
+<li>BaseN</li>
+<li>LeaveOneOut</li>
+<li>Target Encoding</li>
 </ul>
 </div></blockquote>
 <p>The ordinal, one-hot, and hashing encoders have similar equivalents in the existing scikit-learn version, but the
@@ -193,15 +197,15 @@ transformers in this library all share a few useful properties:</p>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>install as:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">category_encoders</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">category_encoders</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">category_encoders</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span> <span class="n">category_encoders</span>
 </pre></div>
 </div>
 <p>To use:</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">category_encoders</span> <span class="kn">as</span> <span class="nn">ce</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">category_encoders</span> <span class="kn">as</span> <span class="nn">ce</span>
 
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">BackwardDifferenceEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">BinaryEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
@@ -211,6 +215,9 @@ transformers in this library all share a few useful properties:</p>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">OrdinalEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">SumEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">PolynomialEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">BaseNEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">TargetEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">ce</span><span class="o">.</span><span class="n">LeaveOneOutEncoder</span><span class="p">(</span><span class="n">cols</span><span class="o">=</span><span class="p">[</span><span class="o">...</span><span class="p">])</span>
 
 <span class="n">encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">X_cleaned</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_dirty</span><span class="p">)</span>
@@ -221,16 +228,39 @@ the cols parameter isn’t passed, every non-numeric column will be converted. S
 <p>Contents:</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="backward_difference.html">Backward Difference Coding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="binary.html">Binary</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hashing.html">Hashing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="helmert.html">Helmert Coding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="onehot.html">One Hot</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ordinal.html">Ordinal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="polynomial.html">Polynomial Coding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="sum.html">Sum Coding</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basen.html">BaseN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="leaveoneout.html">Leave One Out</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backward_difference.html">Backward Difference Coding</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="binary.html">Binary</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="hashing.html">Hashing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="helmert.html">Helmert Coding</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="onehot.html">One Hot</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ordinal.html">Ordinal</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="polynomial.html">Polynomial Coding</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="sum.html">Sum Coding</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="basen.html">BaseN</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="leaveoneout.html">Leave One Out</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="targetencoder.html">Target Encoder</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </div>
 </div>

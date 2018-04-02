@@ -35,9 +35,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Category Encoders latest documentation" href="index.html"/>
-        <link rel="next" title="Helmert Coding" href="helmert.html"/>
-        <link rel="prev" title="Binary" href="binary.html"/> 
+    <link rel="top" title="Category Encoders latest documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -93,7 +91,9 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="backward_difference.html">Backward Difference Coding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="binary.html">Binary</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Hashing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hashing</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="helmert.html">Helmert Coding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="onehot.html">One Hot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ordinal.html">Ordinal</a></li>
@@ -101,6 +101,7 @@
 <li class="toctree-l1"><a class="reference internal" href="sum.html">Sum Coding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basen.html">BaseN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="leaveoneout.html">Leave One Out</a></li>
+<li class="toctree-l1"><a class="reference internal" href="targetencoder.html">Target Encoder</a></li>
 </ul>
 
             
@@ -174,39 +175,62 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>verbose: int</strong></p>
-<blockquote>
-<div><p>integer indicating verbosity of output. 0 for none.</p>
-</div></blockquote>
-<p><strong>cols: list</strong></p>
-<blockquote>
-<div><p>a list of columns to encode, if None, all string columns will be encoded</p>
-</div></blockquote>
-<p><strong>drop_invariant: bool</strong></p>
-<blockquote>
-<div><p>boolean for whether or not to drop columns with 0 variance</p>
-</div></blockquote>
-<p><strong>return_df: bool</strong></p>
-<blockquote>
-<div><p>boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</p>
-</div></blockquote>
-<p><strong>hash_method: str</strong></p>
-<blockquote class="last">
-<div><p>which hashing method to use. Any method from hashlib works.</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>verbose: int</strong></dt>
+<dd><p class="first last">integer indicating verbosity of output. 0 for none.</p>
+</dd>
+<dt><strong>cols: list</strong></dt>
+<dd><p class="first last">a list of columns to encode, if None, all string columns will be encoded</p>
+</dd>
+<dt><strong>drop_invariant: bool</strong></dt>
+<dd><p class="first last">boolean for whether or not to drop columns with 0 variance</p>
+</dd>
+<dt><strong>return_df: bool</strong></dt>
+<dd><p class="first last">boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</p>
+</dd>
+<dt><strong>hash_method: str</strong></dt>
+<dd><p class="first last">which hashing method to use. Any method from hashlib works.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r56" rules="none">
+<table class="docutils citation" frame="void" id="r8dde675226a2-1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[R56]</a></td><td>Kilian Weinberger; Anirban Dasgupta; John Langford; Alex Smola; Josh Attenberg (2009). Feature Hashing for</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Kilian Weinberger; Anirban Dasgupta; John Langford; Alex Smola; Josh Attenberg (2009). Feature Hashing for</td></tr>
 </tbody>
 </table>
 <p>Large Scale Multitask Learning. Proc. ICML.</p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#category_encoders.hashing.HashingEncoder.fit" title="category_encoders.hashing.HashingEncoder.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(X[,&nbsp;y])</td>
+<td>Fit encoder according to X and y.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_transform</span></code>(X[,&nbsp;y])</td>
+<td>Fit to data, then transform it.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code>([deep])</td>
+<td>Get parameters for this estimator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="category_encoders.hashing.HashingEncoder.hashing_trick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hashing_trick</span></code></a>([hashing_method,&nbsp;N,&nbsp;cols,&nbsp;…])</td>
+<td>A basic hashing implementation with configurable dimensionality/precision</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code>(**params)</td>
+<td>Set the parameters of this estimator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#category_encoders.hashing.HashingEncoder.transform" title="category_encoders.hashing.HashingEncoder.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(X)</td>
+<td>Perform the transformation to new categorical data.</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="category_encoders.hashing.HashingEncoder.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder.fit" title="Permalink to this definition">¶</a></dt>
@@ -215,21 +239,22 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_samples, n_features]</p>
-<blockquote>
-<div><p>Training vectors, where n_samples is the number of samples
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples, n_features]</span></dt>
+<dd><p class="first last">Training vectors, where n_samples is the number of samples
 and n_features is the number of features.</p>
-</div></blockquote>
-<p><strong>y</strong> : array-like, shape = [n_samples]</p>
-<blockquote>
-<div><p>Target values.</p>
-</div></blockquote>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples]</span></dt>
+<dd><p class="first last">Target values.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : encoder</p>
-<blockquote class="last">
-<div><p>Returns self.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>self</strong> <span class="classifier-delimiter">:</span> <span class="classifier">encoder</span></dt>
+<dd><p class="first last">Returns self.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -238,7 +263,7 @@ and n_features is the number of features.</p>
 
 <dl class="staticmethod">
 <dt id="category_encoders.hashing.HashingEncoder.hashing_trick">
-<em class="property">static </em><code class="descname">hashing_trick</code><span class="sig-paren">(</span><em>X_in</em>, <em>hashing_method='md5'</em>, <em>N=2</em>, <em>cols=None</em>, <em>make_copy=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder.hashing_trick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">hashing_trick</code><span class="sig-paren">(</span><em>hashing_method='md5'</em>, <em>N=2</em>, <em>cols=None</em>, <em>make_copy=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder.hashing_trick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="Permalink to this definition">¶</a></dt>
 <dd><p>A basic hashing implementation with configurable dimensionality/precision</p>
 <p>Performs the hashing trick on a pandas dataframe, <cite>X</cite>, using the hashing method from hashlib
 identified by <cite>hashing_method</cite>.  The number of output dimensions (<cite>N</cite>), and columns to hash (<cite>cols</cite>) are
@@ -247,40 +272,38 @@ also configurable.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X_in: pandas dataframe</strong></p>
-<blockquote>
-<div><p>description text</p>
-</div></blockquote>
-<p><strong>hashing_method: string, optional</strong></p>
-<blockquote>
-<div><p>description text</p>
-</div></blockquote>
-<p><strong>N: int, optional</strong></p>
-<blockquote>
-<div><p>description text</p>
-</div></blockquote>
-<p><strong>cols: list, optional</strong></p>
-<blockquote>
-<div><p>description text</p>
-</div></blockquote>
-<p><strong>make_copy: bool, optional</strong></p>
-<blockquote>
-<div><p>description text</p>
-</div></blockquote>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X_in: pandas dataframe</strong></dt>
+<dd><p class="first last">description text</p>
+</dd>
+<dt><strong>hashing_method: string, optional</strong></dt>
+<dd><p class="first last">description text</p>
+</dd>
+<dt><strong>N: int, optional</strong></dt>
+<dd><p class="first last">description text</p>
+</dd>
+<dt><strong>cols: list, optional</strong></dt>
+<dd><p class="first last">description text</p>
+</dd>
+<dt><strong>make_copy: bool, optional</strong></dt>
+<dd><p class="first last">description text</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : dataframe</p>
-<blockquote class="last">
-<div><p>A hashing encoded dataframe.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>out</strong> <span class="classifier-delimiter">:</span> <span class="classifier">dataframe</span></dt>
+<dd><p class="first last">A hashing encoded dataframe.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<p>Cite the relevant literature, e.g. [R668].  You may also cite these
+<p>Cite the relevant literature, e.g. [R6b702480991a-1].  You may also cite these
 references in the notes section above.
-.. [R668] Kilian Weinberger; Anirban Dasgupta; John Langford; Alex Smola; Josh Attenberg (2009). Feature Hashing
+.. [R6b702480991a-1] Kilian Weinberger; Anirban Dasgupta; John Langford; Alex Smola; Josh Attenberg (2009). Feature Hashing
 for Large Scale Multitask Learning. Proc. ICML.</p>
 </dd></dl>
 
@@ -292,13 +315,17 @@ for Large Scale Multitask Learning. Proc. ICML.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_samples, n_features]</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples, n_features]</span></dt>
+<dd></dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : array, shape = [n_samples, n_numeric + N]</p>
-<blockquote class="last">
-<div><p>Transformed values with encoding applied.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>p</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array, shape = [n_samples, n_numeric + N]</span></dt>
+<dd><p class="first last">Transformed values with encoding applied.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -316,15 +343,6 @@ for Large Scale Multitask Learning. Proc. ICML.</p>
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="helmert.html" class="btn btn-neutral float-right" title="Helmert Coding" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="binary.html" class="btn btn-neutral" title="Binary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

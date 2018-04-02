@@ -35,9 +35,7 @@
         <link rel="index" title="Index"
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Category Encoders latest documentation" href="index.html"/>
-        <link rel="next" title="One Hot" href="onehot.html"/>
-        <link rel="prev" title="Hashing" href="hashing.html"/> 
+    <link rel="top" title="Category Encoders latest documentation" href="index.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -94,13 +92,16 @@
 <li class="toctree-l1"><a class="reference internal" href="backward_difference.html">Backward Difference Coding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="binary.html">Binary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hashing.html">Hashing</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Helmert Coding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Helmert Coding</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="onehot.html">One Hot</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ordinal.html">Ordinal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="polynomial.html">Polynomial Coding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sum.html">Sum Coding</a></li>
 <li class="toctree-l1"><a class="reference internal" href="basen.html">BaseN</a></li>
 <li class="toctree-l1"><a class="reference internal" href="leaveoneout.html">Leave One Out</a></li>
+<li class="toctree-l1"><a class="reference internal" href="targetencoder.html">Target Encoder</a></li>
 </ul>
 
             
@@ -174,52 +175,82 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>verbose: int</strong></p>
-<blockquote>
-<div><p>integer indicating verbosity of output. 0 for none.</p>
-</div></blockquote>
-<p><strong>cols: list</strong></p>
-<blockquote>
-<div><p>a list of columns to encode, if None, all string columns will be encoded</p>
-</div></blockquote>
-<p><strong>drop_invariant: bool</strong></p>
-<blockquote>
-<div><p>boolean for whether or not to drop columns with 0 variance</p>
-</div></blockquote>
-<p><strong>return_df: bool</strong></p>
-<blockquote>
-<div><p>boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</p>
-</div></blockquote>
-<p><strong>impute_missing: bool</strong></p>
-<blockquote>
-<div><p>boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</p>
-</div></blockquote>
-<p><strong>handle_unknown: str</strong></p>
-<blockquote class="last">
-<div><p>options are ‘error’, ‘ignore’ and ‘impute’, defaults to ‘impute’, which will impute the category -1. Warning: if
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>verbose: int</strong></dt>
+<dd><p class="first last">integer indicating verbosity of output. 0 for none.</p>
+</dd>
+<dt><strong>cols: list</strong></dt>
+<dd><p class="first last">a list of columns to encode, if None, all string columns will be encoded</p>
+</dd>
+<dt><strong>drop_invariant: bool</strong></dt>
+<dd><p class="first last">boolean for whether or not to drop columns with 0 variance</p>
+</dd>
+<dt><strong>return_df: bool</strong></dt>
+<dd><p class="first last">boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</p>
+</dd>
+<dt><strong>impute_missing: bool</strong></dt>
+<dd><p class="first last">boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</p>
+</dd>
+<dt><strong>handle_unknown: str</strong></dt>
+<dd><p class="first last">options are ‘error’, ‘ignore’ and ‘impute’, defaults to ‘impute’, which will impute the category -1. Warning: if
 impute is used, an extra column will be added in if the transform matrix has unknown categories.  This can causes
 unexpected changes in dimension in some cases.</p>
-</div></blockquote>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r1011" rules="none">
+<table class="docutils citation" frame="void" id="r30008cbf9aca-1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id1">[R1011]</a></td><td>Contrast Coding Systems for categorical variables.  UCLA: Statistical Consulting Group. from</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Contrast Coding Systems for categorical variables.  UCLA: Statistical Consulting Group. from</td></tr>
 </tbody>
 </table>
 <p><a class="reference external" href="https://stats.idre.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/">https://stats.idre.ucla.edu/r/library/r-library-contrast-coding-systems-for-categorical-variables/</a>.</p>
-<table class="docutils citation" frame="void" id="r1111" rules="none">
+<table class="docutils citation" frame="void" id="r30008cbf9aca-2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id2">[R1111]</a></td><td>Gregory Carey (2003). Coding Categorical Variables, from</td></tr>
+<tr><td class="label"><a class="fn-backref" href="#id2">[2]</a></td><td>Gregory Carey (2003). Coding Categorical Variables, from</td></tr>
 </tbody>
 </table>
 <p><a class="reference external" href="http://psych.colorado.edu/~carey/Courses/PSYC5741/handouts/Coding%20Categorical%20Variables%202006-03-03.pdf">http://psych.colorado.edu/~carey/Courses/PSYC5741/handouts/Coding%20Categorical%20Variables%202006-03-03.pdf</a></p>
 <p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#category_encoders.helmert.HelmertEncoder.fit" title="category_encoders.helmert.HelmertEncoder.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(X[,&nbsp;y])</td>
+<td>Fit encoder according to X and y.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_transform</span></code>(X[,&nbsp;y])</td>
+<td>Fit to data, then transform it.</td>
+</tr>
+<tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code>([deep])</td>
+<td>Get parameters for this estimator.</td>
+</tr>
+<tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code>(**params)</td>
+<td>Set the parameters of this estimator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#category_encoders.helmert.HelmertEncoder.transform" title="category_encoders.helmert.HelmertEncoder.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>(X)</td>
+<td>Perform the transformation to new categorical data.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="64%" />
+<col width="36%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>helmert_coding</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
 <dl class="method">
 <dt id="category_encoders.helmert.HelmertEncoder.fit">
 <code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/helmert.html#HelmertEncoder.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.helmert.HelmertEncoder.fit" title="Permalink to this definition">¶</a></dt>
@@ -228,21 +259,22 @@ unexpected changes in dimension in some cases.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_samples, n_features]</p>
-<blockquote>
-<div><p>Training vectors, where n_samples is the number of samples
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples, n_features]</span></dt>
+<dd><p class="first last">Training vectors, where n_samples is the number of samples
 and n_features is the number of features.</p>
-</div></blockquote>
-<p><strong>y</strong> : array-like, shape = [n_samples]</p>
-<blockquote>
-<div><p>Target values.</p>
-</div></blockquote>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples]</span></dt>
+<dd><p class="first last">Target values.</p>
+</dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : encoder</p>
-<blockquote class="last">
-<div><p>Returns self.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>self</strong> <span class="classifier-delimiter">:</span> <span class="classifier">encoder</span></dt>
+<dd><p class="first last">Returns self.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -251,7 +283,7 @@ and n_features is the number of features.</p>
 
 <dl class="staticmethod">
 <dt id="category_encoders.helmert.HelmertEncoder.helmert_coding">
-<em class="property">static </em><code class="descname">helmert_coding</code><span class="sig-paren">(</span><em>X_in</em>, <em>cols=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/helmert.html#HelmertEncoder.helmert_coding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.helmert.HelmertEncoder.helmert_coding" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">helmert_coding</code><span class="sig-paren">(</span><em>cols=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/helmert.html#HelmertEncoder.helmert_coding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.helmert.HelmertEncoder.helmert_coding" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -262,13 +294,17 @@ and n_features is the number of features.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>X</strong> : array-like, shape = [n_samples, n_features]</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like, shape = [n_samples, n_features]</span></dt>
+<dd></dd>
+</dl>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : array, shape = [n_samples, n_numeric + N]</p>
-<blockquote class="last">
-<div><p>Transformed values with encoding applied.</p>
-</div></blockquote>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>p</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array, shape = [n_samples, n_numeric + N]</span></dt>
+<dd><p class="first last">Transformed values with encoding applied.</p>
+</dd>
+</dl>
 </td>
 </tr>
 </tbody>
@@ -286,15 +322,6 @@ and n_features is the number of features.</p>
            </div>
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="onehot.html" class="btn btn-neutral float-right" title="One Hot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="hashing.html" class="btn btn-neutral" title="Hashing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
