@@ -25,24 +25,17 @@
   
 
   
-  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Category Encoders latest documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -113,7 +106,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Category Encoders</a>
@@ -121,9 +114,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -169,7 +163,7 @@
 <h1>One Hot<a class="headerlink" href="#one-hot" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="category_encoders.one_hot.OneHotEncoder">
-<em class="property">class </em><code class="descclassname">category_encoders.one_hot.</code><code class="descname">OneHotEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/one_hot.html#OneHotEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.one_hot.OneHotEncoder" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descclassname">category_encoders.one_hot.</code><code class="descname">OneHotEncoder</code><span class="sig-paren">(</span><em>verbose=0</em>, <em>cols=None</em>, <em>drop_invariant=False</em>, <em>return_df=True</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em>, <em>use_cat_names=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/one_hot.html#OneHotEncoder"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.one_hot.OneHotEncoder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Onehot (or dummy) coding for categorical features, produces one feature per category, each binary.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -195,6 +189,10 @@
 <dd><p class="first last">options are ‘error’, ‘ignore’ and ‘impute’, defaults to ‘impute’, which will impute the category -1. Warning: if
 impute is used, an extra column will be added in if the transform matrix has unknown categories.  This can causes
 unexpected changes in dimension in some cases.</p>
+</dd>
+<dt><strong>use_cat_names: bool</strong></dt>
+<dd><p class="first last">if True, category values will be included in the encoded column names. otherwise category
+indices will be used.</p>
 </dd>
 </dl>
 </td>
@@ -400,9 +398,7 @@ and n_features is the number of features.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -415,7 +411,7 @@ and n_features is the number of features.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -434,6 +430,7 @@ and n_features is the number of features.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'latest',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -451,14 +448,11 @@ and n_features is the number of features.</p>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

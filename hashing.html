@@ -25,24 +25,17 @@
   
 
   
-  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Category Encoders latest documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -113,7 +106,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Category Encoders</a>
@@ -121,9 +114,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -220,7 +214,7 @@
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code>([deep])</td>
 <td>Get parameters for this estimator.</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="category_encoders.hashing.HashingEncoder.hashing_trick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hashing_trick</span></code></a>([hashing_method,&nbsp;N,&nbsp;cols,&nbsp;…])</td>
+<tr class="row-even"><td><a class="reference internal" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="category_encoders.hashing.HashingEncoder.hashing_trick"><code class="xref py py-obj docutils literal notranslate"><span class="pre">hashing_trick</span></code></a>(X_in[,&nbsp;hashing_method,&nbsp;N,&nbsp;…])</td>
 <td>A basic hashing implementation with configurable dimensionality/precision</td>
 </tr>
 <tr class="row-odd"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code>(**params)</td>
@@ -263,7 +257,7 @@ and n_features is the number of features.</p>
 
 <dl class="staticmethod">
 <dt id="category_encoders.hashing.HashingEncoder.hashing_trick">
-<em class="property">static </em><code class="descname">hashing_trick</code><span class="sig-paren">(</span><em>hashing_method='md5'</em>, <em>N=2</em>, <em>cols=None</em>, <em>make_copy=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder.hashing_trick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">hashing_trick</code><span class="sig-paren">(</span><em>X_in</em>, <em>hashing_method='md5'</em>, <em>N=2</em>, <em>cols=None</em>, <em>make_copy=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/hashing.html#HashingEncoder.hashing_trick"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.hashing.HashingEncoder.hashing_trick" title="Permalink to this definition">¶</a></dt>
 <dd><p>A basic hashing implementation with configurable dimensionality/precision</p>
 <p>Performs the hashing trick on a pandas dataframe, <cite>X</cite>, using the hashing method from hashlib
 identified by <cite>hashing_method</cite>.  The number of output dimensions (<cite>N</cite>), and columns to hash (<cite>cols</cite>) are
@@ -338,9 +332,7 @@ for Large Scale Multitask Learning. Proc. ICML.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -353,7 +345,7 @@ for Large Scale Multitask Learning. Proc. ICML.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -372,6 +364,7 @@ for Large Scale Multitask Learning. Proc. ICML.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'latest',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -389,14 +382,11 @@ for Large Scale Multitask Learning. Proc. ICML.</p>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

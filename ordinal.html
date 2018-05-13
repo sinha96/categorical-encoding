@@ -25,24 +25,17 @@
   
 
   
-  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Category Encoders latest documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -113,7 +106,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Category Encoders</a>
@@ -121,9 +114,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -251,7 +245,7 @@ are assumed to have no true order and integers are selected at random.</p>
 <tr class="row-even"><td><a class="reference internal" href="#category_encoders.ordinal.OrdinalEncoder.inverse_transform" title="category_encoders.ordinal.OrdinalEncoder.inverse_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">inverse_transform</span></code></a>(Xt)</td>
 <td>Perform the inverse transformation to encoded data.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding" title="category_encoders.ordinal.OrdinalEncoder.ordinal_encoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ordinal_encoding</span></code></a>([mapping,&nbsp;cols,&nbsp;…])</td>
+<tr class="row-odd"><td><a class="reference internal" href="#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding" title="category_encoders.ordinal.OrdinalEncoder.ordinal_encoding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ordinal_encoding</span></code></a>(X_in[,&nbsp;mapping,&nbsp;cols,&nbsp;…])</td>
 <td>Ordinal encoding uses a single column of integers to represent the classes.</td>
 </tr>
 <tr class="row-even"><td><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code>(**params)</td>
@@ -318,7 +312,7 @@ and n_features is the number of features.</p>
 
 <dl class="staticmethod">
 <dt id="category_encoders.ordinal.OrdinalEncoder.ordinal_encoding">
-<em class="property">static </em><code class="descname">ordinal_encoding</code><span class="sig-paren">(</span><em>mapping=None</em>, <em>cols=None</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/ordinal.html#OrdinalEncoder.ordinal_encoding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">ordinal_encoding</code><span class="sig-paren">(</span><em>X_in</em>, <em>mapping=None</em>, <em>cols=None</em>, <em>impute_missing=True</em>, <em>handle_unknown='impute'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/ordinal.html#OrdinalEncoder.ordinal_encoding"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.ordinal.OrdinalEncoder.ordinal_encoding" title="Permalink to this definition">¶</a></dt>
 <dd><p>Ordinal encoding uses a single column of integers to represent the classes. An optional mapping dict can be passed
 in, in this case we use the knowledge that there is some true order to the classes themselves. Otherwise, the classes
 are assumed to have no true order and integers are selected at random.</p>
@@ -357,9 +351,7 @@ data ordinally.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -372,7 +364,7 @@ data ordinally.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -391,6 +383,7 @@ data ordinally.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'latest',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -408,14 +401,11 @@ data ordinally.</p>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

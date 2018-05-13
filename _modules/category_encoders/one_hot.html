@@ -25,25 +25,17 @@
   
 
   
-  
     <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../genindex.html"/>
-        <link rel="search" title="Search" href="../../search.html"/>
-    <link rel="top" title="Category Encoders latest documentation" href="../../index.html"/>
-        <link rel="up" title="Module code" href="../index.html"/> 
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
 
   
   <script src="../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -112,7 +104,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../index.html">Category Encoders</a>
@@ -120,9 +112,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -152,8 +145,6 @@
     
       <li class="wy-breadcrumbs-aside">
         
-            
-        
       </li>
     
   </ul>
@@ -168,6 +159,7 @@
 <span></span><span class="sd">&quot;&quot;&quot;One-hot or dummy coding&quot;&quot;&quot;</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">copy</span>
 <span class="kn">from</span> <span class="nn">sklearn.base</span> <span class="k">import</span> <span class="n">BaseEstimator</span><span class="p">,</span> <span class="n">TransformerMixin</span>
 <span class="kn">from</span> <span class="nn">category_encoders.ordinal</span> <span class="k">import</span> <span class="n">OrdinalEncoder</span>
 <span class="kn">from</span> <span class="nn">category_encoders.utils</span> <span class="k">import</span> <span class="n">get_obj_cols</span><span class="p">,</span> <span class="n">convert_input</span>
@@ -195,6 +187,9 @@
 <span class="sd">        options are &#39;error&#39;, &#39;ignore&#39; and &#39;impute&#39;, defaults to &#39;impute&#39;, which will impute the category -1. Warning: if</span>
 <span class="sd">        impute is used, an extra column will be added in if the transform matrix has unknown categories.  This can causes</span>
 <span class="sd">        unexpected changes in dimension in some cases.</span>
+<span class="sd">    use_cat_names: bool</span>
+<span class="sd">        if True, category values will be included in the encoded column names. otherwise category</span>
+<span class="sd">        indices will be used.</span>
 
 <span class="sd">    Example</span>
 <span class="sd">    -------</span>
@@ -248,7 +243,7 @@
 
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_invariant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">impute_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;impute&#39;</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">cols</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">drop_invariant</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">return_df</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">impute_missing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">handle_unknown</span><span class="o">=</span><span class="s1">&#39;impute&#39;</span><span class="p">,</span> <span class="n">use_cat_names</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">return_df</span> <span class="o">=</span> <span class="n">return_df</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drop_invariant</span> <span class="o">=</span> <span class="n">drop_invariant</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">drop_cols</span> <span class="o">=</span> <span class="p">[]</span>
@@ -258,6 +253,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_dim</span> <span class="o">=</span> <span class="kc">None</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">impute_missing</span> <span class="o">=</span> <span class="n">impute_missing</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">handle_unknown</span> <span class="o">=</span> <span class="n">handle_unknown</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_cat_names</span> <span class="o">=</span> <span class="n">use_cat_names</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">category_mapping</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -388,10 +384,10 @@
                 <span class="k">if</span> <span class="nb">any</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
                     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;inverse_transform is not supported because transform impute &quot;</span>
                                      <span class="s2">&quot;the unknown category -1 when encode </span><span class="si">%s</span><span class="s2">&quot;</span><span class="o">%</span><span class="p">(</span><span class="n">col</span><span class="p">,))</span>
-
-        <span class="k">for</span> <span class="n">switch</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">mapping</span><span class="p">:</span>
-            <span class="n">col_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">col_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="n">col_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">col_pair</span> <span class="ow">in</span> <span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mapping&#39;</span><span class="p">)}</span>
-            <span class="n">X</span><span class="p">[</span><span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;col&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;col&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">col_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_cat_names</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">switch</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">mapping</span><span class="p">:</span>
+                <span class="n">col_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">col_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="p">:</span> <span class="n">col_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">col_pair</span> <span class="ow">in</span> <span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;mapping&#39;</span><span class="p">)}</span>
+                <span class="n">X</span><span class="p">[</span><span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;col&#39;</span><span class="p">)]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">switch</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;col&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span><span class="n">col_dict</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
 
         <span class="k">return</span> <span class="n">X</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">return_df</span> <span class="k">else</span> <span class="n">X</span><span class="o">.</span><span class="n">values</span></div>
 
@@ -419,12 +415,17 @@
 
         <span class="n">bin_cols</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
-            <span class="n">col_tuples</span> <span class="o">=</span> <span class="p">[</span><span class="n">class_map</span><span class="p">[</span><span class="s1">&#39;mapping&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">class_map</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">mapping</span> <span class="k">if</span> <span class="n">class_map</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
-            <span class="n">fit_classes</span> <span class="o">=</span> <span class="p">[</span><span class="n">col_val</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">col_val</span> <span class="ow">in</span> <span class="n">col_tuples</span><span class="p">]</span>
+            <span class="n">col_tuples</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">([</span><span class="n">class_map</span><span class="p">[</span><span class="s1">&#39;mapping&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">class_map</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">ordinal_encoder</span><span class="o">.</span><span class="n">mapping</span> <span class="k">if</span> <span class="n">class_map</span><span class="p">[</span><span class="s1">&#39;col&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">col</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">handle_unknown</span> <span class="o">==</span> <span class="s1">&#39;impute&#39;</span><span class="p">:</span>
-                <span class="n">fit_classes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-            <span class="k">for</span> <span class="n">class_</span> <span class="ow">in</span> <span class="n">fit_classes</span><span class="p">:</span>
-                <span class="n">n_col_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">class_</span><span class="p">,</span> <span class="p">)</span>
+                <span class="n">col_tuples</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="s1">&#39;-1&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+            <span class="k">for</span> <span class="n">col_tuple</span> <span class="ow">in</span> <span class="n">col_tuples</span><span class="p">:</span>
+                <span class="n">class_</span> <span class="o">=</span> <span class="n">col_tuple</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">cat_name</span> <span class="o">=</span> <span class="n">col_tuple</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+                <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_cat_names</span><span class="p">:</span>
+                    <span class="n">n_col_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">cat_name</span><span class="p">,</span> <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">n_col_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">col</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39;_</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">class_</span><span class="p">,</span> <span class="p">)</span>
+
                 <span class="n">X</span><span class="p">[</span><span class="n">n_col_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">==</span> <span class="n">class_</span>
                 <span class="n">bin_cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n_col_name</span><span class="p">)</span>
 
@@ -455,8 +456,14 @@
 
         <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">cols</span><span class="p">:</span>
             <span class="n">col_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">col0</span> <span class="k">for</span> <span class="n">col0</span> <span class="ow">in</span> <span class="n">out_cols</span> <span class="k">if</span> <span class="n">col0</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">col</span><span class="p">)]</span>
-            <span class="n">value_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">col0</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">col0</span> <span class="ow">in</span> <span class="n">col_list</span><span class="p">])</span>
-            <span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col_list</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">value_array</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">use_cat_names</span><span class="p">:</span>
+                <span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+                <span class="k">for</span> <span class="n">tran_col</span> <span class="ow">in</span> <span class="n">col_list</span><span class="p">:</span>
+                    <span class="n">val</span> <span class="o">=</span> <span class="n">tran_col</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                    <span class="n">X</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">X</span><span class="p">[</span><span class="n">tran_col</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">value_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">int</span><span class="p">(</span><span class="n">col0</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">])</span> <span class="k">for</span> <span class="n">col0</span> <span class="ow">in</span> <span class="n">col_list</span><span class="p">])</span>
+                <span class="n">X</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">col_list</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">value_array</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
             <span class="n">out_cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">col0</span> <span class="k">for</span> <span class="n">col0</span> <span class="ow">in</span> <span class="n">out_cols</span> <span class="k">if</span> <span class="n">col0</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">col_list</span><span class="p">]</span>
 
         <span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">reindex</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">out_cols</span> <span class="o">+</span> <span class="n">cols</span><span class="p">)</span>
@@ -465,9 +472,7 @@
 </pre></div>
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -480,7 +485,7 @@
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -499,6 +504,7 @@
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../../',
             VERSION:'latest',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -516,14 +522,11 @@
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

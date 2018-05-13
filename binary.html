@@ -25,24 +25,17 @@
   
 
   
-  
     <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="Category Encoders latest documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -113,7 +106,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">Category Encoders</a>
@@ -121,9 +114,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -214,10 +208,10 @@ unexpected changes in dimension in some cases.</p>
 <tr class="row-even"><td><a class="reference internal" href="#category_encoders.binary.BinaryEncoder.binery_to_interger" title="category_encoders.binary.BinaryEncoder.binery_to_interger"><code class="xref py py-obj docutils literal notranslate"><span class="pre">binery_to_interger</span></code></a>(X,&nbsp;cols)</td>
 <td>Convert binary code as integers.</td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="#category_encoders.binary.BinaryEncoder.calc_required_digits" title="category_encoders.binary.BinaryEncoder.calc_required_digits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calc_required_digits</span></code></a>(col)</td>
+<tr class="row-odd"><td><a class="reference internal" href="#category_encoders.binary.BinaryEncoder.calc_required_digits" title="category_encoders.binary.BinaryEncoder.calc_required_digits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calc_required_digits</span></code></a>(X,&nbsp;col)</td>
 <td>figure out how many digits we need to represent the classes present</td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="#category_encoders.binary.BinaryEncoder.col_transform" title="category_encoders.binary.BinaryEncoder.col_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">col_transform</span></code></a>(digits)</td>
+<tr class="row-even"><td><a class="reference internal" href="#category_encoders.binary.BinaryEncoder.col_transform" title="category_encoders.binary.BinaryEncoder.col_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">col_transform</span></code></a>(col,&nbsp;digits)</td>
 <td>The lambda body to transform the column values</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="#category_encoders.binary.BinaryEncoder.fit" title="category_encoders.binary.BinaryEncoder.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(X[,&nbsp;y])</td>
@@ -297,13 +291,13 @@ unexpected changes in dimension in some cases.</p>
 
 <dl class="staticmethod">
 <dt id="category_encoders.binary.BinaryEncoder.calc_required_digits">
-<em class="property">static </em><code class="descname">calc_required_digits</code><span class="sig-paren">(</span><em>col</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/binary.html#BinaryEncoder.calc_required_digits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.binary.BinaryEncoder.calc_required_digits" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">calc_required_digits</code><span class="sig-paren">(</span><em>X</em>, <em>col</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/binary.html#BinaryEncoder.calc_required_digits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.binary.BinaryEncoder.calc_required_digits" title="Permalink to this definition">¶</a></dt>
 <dd><p>figure out how many digits we need to represent the classes present</p>
 </dd></dl>
 
 <dl class="staticmethod">
 <dt id="category_encoders.binary.BinaryEncoder.col_transform">
-<em class="property">static </em><code class="descname">col_transform</code><span class="sig-paren">(</span><em>digits</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/binary.html#BinaryEncoder.col_transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.binary.BinaryEncoder.col_transform" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">col_transform</code><span class="sig-paren">(</span><em>col</em>, <em>digits</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/category_encoders/binary.html#BinaryEncoder.col_transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#category_encoders.binary.BinaryEncoder.col_transform" title="Permalink to this definition">¶</a></dt>
 <dd><p>The lambda body to transform the column values</p>
 </dd></dl>
 
@@ -392,9 +386,7 @@ and n_features is the number of features.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -407,7 +399,7 @@ and n_features is the number of features.</p>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -426,6 +418,7 @@ and n_features is the number of features.</p>
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
             VERSION:'latest',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -443,14 +436,11 @@ and n_features is the number of features.</p>
     <script type="text/javascript" src="_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>
