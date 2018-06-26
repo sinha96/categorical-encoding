@@ -24,8 +24,7 @@
 
   
 
-  
-    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -186,8 +185,12 @@
 <span class="sd">        boolean for whether or not to drop columns with 0 variance</span>
 <span class="sd">    return_df: bool</span>
 <span class="sd">        boolean for whether to return a pandas DataFrame from transform (otherwise it will be a numpy array)</span>
-<span class="sd">    mapping: list of dict</span>
+<span class="sd">   mapping: list of dict</span>
 <span class="sd">        a mapping of class to label to use for the encoding, optional.</span>
+<span class="sd">        the dict contains the keys &#39;col&#39; and &#39;mapping&#39;.</span>
+<span class="sd">        the value of &#39;col&#39; should be the feature name.</span>
+<span class="sd">        the value of &#39;mapping&#39; should be a list of tuples of format (original_label, encoded_label).</span>
+<span class="sd">        example mapping: [{&#39;col&#39;: &#39;col1&#39;, &#39;mapping&#39;: [(None, 0), (&#39;a&#39;, 1), (&#39;b&#39;, 2)]}]</span>
 <span class="sd">    impute_missing: bool</span>
 <span class="sd">        boolean for whether or not to apply the logic for handle_unknown, will be deprecated in the future.</span>
 <span class="sd">    handle_unknown: str</span>
@@ -490,10 +493,7 @@
 
   
 
-  
-  
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
   <script type="text/javascript">
       jQuery(function () {
