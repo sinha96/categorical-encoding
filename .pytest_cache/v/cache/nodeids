@@ -1,0 +1,3 @@
+[
+  "category_encoders/tests/test_encoders.py::TestEncoders::test_string_index2"
+]
