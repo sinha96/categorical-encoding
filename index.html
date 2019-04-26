@@ -17,33 +17,35 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Backward Difference Coding" href="backward_difference.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -163,28 +165,28 @@
 techniques.  Currently implemented are:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Ordinal</li>
-<li>One-Hot</li>
-<li>Binary</li>
-<li>Helmert Contrast</li>
-<li>Sum Contrast</li>
-<li>Polynomial Contrast</li>
-<li>Backward Difference Contrast</li>
-<li>Hashing</li>
-<li>BaseN</li>
-<li>LeaveOneOut</li>
-<li>Target Encoding</li>
+<li><p>Ordinal</p></li>
+<li><p>One-Hot</p></li>
+<li><p>Binary</p></li>
+<li><p>Helmert Contrast</p></li>
+<li><p>Sum Contrast</p></li>
+<li><p>Polynomial Contrast</p></li>
+<li><p>Backward Difference Contrast</p></li>
+<li><p>Hashing</p></li>
+<li><p>BaseN</p></li>
+<li><p>LeaveOneOut</p></li>
+<li><p>Target Encoding</p></li>
 </ul>
 </div></blockquote>
 <p>The ordinal, one-hot, and hashing encoders have similar equivalents in the existing scikit-learn version, but the
 transformers in this library all share a few useful properties:</p>
 <blockquote>
 <div><ul class="simple">
-<li>First-class support for pandas dataframes as an input (and optionally as output)</li>
-<li>Can explicitly configure which columns in the data are encoded by name or index, or infer non-numeric columns regardless of input type</li>
-<li>Can drop any columns with very low variance based on training set optionally</li>
-<li>Portability: train a transformer on data, pickle it, reuse it later and get the same thing out.</li>
-<li>Full compatibility with sklearn pipelines, input an array-like dataset like any other transformer</li>
+<li><p>First-class support for pandas dataframes as an input (and optionally as output)</p></li>
+<li><p>Can explicitly configure which columns in the data are encoded by name or index, or infer non-numeric columns regardless of input type</p></li>
+<li><p>Can drop any columns with very low variance based on training set optionally</p></li>
+<li><p>Portability: train a transformer on data, pickle it, reuse it later and get the same thing out.</p></li>
+<li><p>Full compatibility with sklearn pipelines, input an array-like dataset like any other transformer</p></li>
 </ul>
 </div></blockquote>
 <div class="section" id="usage">
@@ -261,9 +263,9 @@ the cols parameter isn’t passed, every non-numeric column will be converted. S
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
-<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
-<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
 </ul>
 </div>
 
@@ -285,7 +287,7 @@ the cols parameter isn’t passed, every non-numeric column will be converted. S
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2016, Will McGinnis.
+        &copy; Copyright 2016, Will McGinnis
 
     </p>
   </div>
@@ -302,32 +304,16 @@ the cols parameter isn’t passed, every non-numeric column will be converted. S
   
 
 
-  
-
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'latest',
-            LANGUAGE:'None',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
