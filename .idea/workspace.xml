@@ -1,0 +1,1247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/category_encoders/target_encoder.py" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d33082c-8f7d-4303-9567-3053533b61eb" name="Default Changelist" comment="Add beta model into James-Stein estimator">
+      <change afterPath="$PROJECT_DIR$/examples/benchmarking_large/catboost_comparison.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/benchmarking_large/arff_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/benchmarking_large/arff_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/benchmarking_large/benchmarking_large.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/benchmarking_large/benchmarking_large.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_in_test_target_encoder_py.coverage" NAME="Unittests in test_target_encoder.py Coverage Results" MODIFIED="1549881347142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$ad.coverage" NAME="ad Coverage Results" MODIFIED="1553771603867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_handle_unknown_error.coverage" NAME="Unittests for test_encoders.TestEncoders.test_handle_unknown_error Coverage Results" MODIFIED="1546535754510" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$report_history.coverage" NAME="report_history Coverage Results" MODIFIED="1546708580254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/benchmarking_large" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$benchmarking_large.coverage" NAME="benchmarking_large Coverage Results" MODIFIED="1551195944747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/benchmarking_large" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_catBoost.coverage" NAME="Unittests for test_encoders.TestEncoders.test_catBoost Coverage Results" MODIFIED="1548167140897" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Nosetests_for_test_basen_TestBaseNEncoder_test_sdfs.coverage" NAME="Nosetests for test_basen.TestBaseNEncoder.test_sdfs Coverage Results" MODIFIED="1550571094283" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_helpers_TestHelpers_test_is_numeric.coverage" NAME="Unittests for test_helpers.TestHelpers.test_is_numeric Coverage Results" MODIFIED="1553159606585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_utils_TestUtils.coverage" NAME="Unittests for test_utils.TestUtils Coverage Results" MODIFIED="1549885533202" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders.coverage" NAME="Unittests for test_encoders.TestEncoders Coverage Results" MODIFIED="1553249406181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_large_samples_js.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_large_samples_js Coverage Results" MODIFIED="1547142376419" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$pytest_for_test_encoders_TestEncoders_test_string_index2.coverage" NAME="pytest for test_encoders.TestEncoders.test_string_index2 Coverage Results" MODIFIED="1546530573837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_ids_large.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_ids_large Coverage Results" MODIFIED="1547124406945" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_classificatifdfson.coverage" NAME="Unittests for test_encoders.TestEncoders.test_classificatifdfson Coverage Results" MODIFIED="1546715483675" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_s.coverage" NAME="Unittests for test_encoders.TestEncoders.test_s Coverage Results" MODIFIED="1549877489556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_small_samples.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_small_samples Coverage Results" MODIFIED="1546781919429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_unique_column_is_not_predictive.coverage" NAME="Unittests for test_encoders.TestEncoders.test_unique_column_is_not_predictive Coverage Results" MODIFIED="1549885380302" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_ids_small.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_ids_small Coverage Results" MODIFIED="1547124323206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_duplicate_index_value.coverage" NAME="Unittests for test_encoders.TestEncoders.test_duplicate_index_value Coverage Results" MODIFIED="1547995728028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_ordinal_TestOrdinalEncoder.coverage" NAME="Unittests for test_ordinal.TestOrdinalEncoder Coverage Results" MODIFIED="1553156508226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_preserve_column_order.coverage" NAME="Unittests for test_encoders.TestEncoders.test_preserve_column_order Coverage Results" MODIFIED="1548338938400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Nosetests_for_test_basen_TestBaseNEncoder_test_inverse_transform_BothFieldsAreReturnNanWithNan_ExpectValueError.coverage" NAME="Nosetests for test_basen.TestBaseNEncoder.test_inverse_transform_BothFieldsAreReturnNanWithNan_ExpectValueError Coverage Results" MODIFIED="1549980188466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_in_test_encoders_py.coverage" NAME="Unittests in test_encoders.py Coverage Results" MODIFIED="1549881361732" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_helpers_TestHelpers_test_is_numeric_numpy.coverage" NAME="Unittests for test_helpers.TestHelpers.test_is_numeric_numpy Coverage Results" MODIFIED="1553160421074" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_one_hot_TestOneHotEncoderTestCase_test_one_hot.coverage" NAME="Unittests for test_one_hot.TestOneHotEncoderTestCase.test_one_hot Coverage Results" MODIFIED="1546596718071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_continuous_target.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_continuous_target Coverage Results" MODIFIED="1547142590423" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$hierarchical.coverage" NAME="hierarchical Coverage Results" MODIFIED="1547981716908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/benchmarking_large" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_sd.coverage" NAME="Unittests for test_encoders.TestEncoders.test_sd Coverage Results" MODIFIED="1549824332610" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_catBoost_missing.coverage" NAME="Unittests for test_encoders.TestEncoders.test_catBoost_missing Coverage Results" MODIFIED="1548349300977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_classification.coverage" NAME="Unittests for test_encoders.TestEncoders.test_classification Coverage Results" MODIFIED="1556007912930" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_dgf.coverage" NAME="Unittests for test_encoders.TestEncoders.test_dgf Coverage Results" MODIFIED="1548160412207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_basen_TestBaseNEncoder.coverage" NAME="Unittests for test_basen.TestBaseNEncoder Coverage Results" MODIFIED="1549978920299" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_sdf.coverage" NAME="Unittests for test_encoders.TestEncoders.test_sdf Coverage Results" MODIFIED="1549887282427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_cols.coverage" NAME="Unittests for test_encoders.TestEncoders.test_cols Coverage Results" MODIFIED="1546700715462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_id_like_features.coverage" NAME="Unittests for test_encoders.TestEncoders.test_id_like_features Coverage Results" MODIFIED="1547142909192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_ordinal_TestOrdinalEncoder_test_ordinarel.coverage" NAME="Unittests for test_ordinal.TestOrdinalEncoder.test_ordinarel Coverage Results" MODIFIED="1553158051754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_continuous_target_lor.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_continuous_target_lor Coverage Results" MODIFIED="1547116724689" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_in_tests.coverage" NAME="Unittests in tests Coverage Results" MODIFIED="1553272550314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_large_samples.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_large_samples Coverage Results" MODIFIED="1546782081753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$hie_example.coverage" NAME="hie_example Coverage Results" MODIFIED="1547911571786" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/benchmarking_large" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_handle_missing_return_nan_train.coverage" NAME="Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan_train Coverage Results" MODIFIED="1548349285208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_basen_TestBaseNEncoder_test_inverse_transform_BothFieldsAreReturnNanWithNan_ExpectValueError.coverage" NAME="Unittests for test_basen.TestBaseNEncoder.test_inverse_transform_BothFieldsAreReturnNanWithNan_ExpectValueError Coverage Results" MODIFIED="1549977517212" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_sd2.coverage" NAME="Unittests for test_encoders.TestEncoders.test_sd2 Coverage Results" MODIFIED="1549826801560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_nsfdp.coverage" NAME="Unittests for test_encoders.TestEncoders.test_nsfdp Coverage Results" MODIFIED="1555504861359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_get_feature_names.coverage" NAME="Unittests for test_encoders.TestEncoders.test_get_feature_names Coverage Results" MODIFIED="1548162096909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_continuous_target_js.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_continuous_target_js Coverage Results" MODIFIED="1547116067046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$report.coverage" NAME="report Coverage Results" MODIFIED="1546635119702" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/benchmarking_large" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_ids_large_js.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_ids_large_js Coverage Results" MODIFIED="1547124580154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_leave_one_out_missing_and_unseen.coverage" NAME="Unittests for test_encoders.TestEncoders.test_leave_one_out_missing_and_unseen Coverage Results" MODIFIED="1548348775768" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder.coverage" NAME="Unittests for test_gauss.TestGaussEncoder Coverage Results" MODIFIED="1547143834243" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_james_stein_TestJamesSteinEncoder.coverage" NAME="Unittests for test_james_stein.TestJamesSteinEncoder Coverage Results" MODIFIED="1547372884595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$asd.coverage" NAME="asd Coverage Results" MODIFIED="1553155612478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_transform_leave_one_out.coverage" NAME="Unittests for test_encoders.TestEncoders.test_transform_leave_one_out Coverage Results" MODIFIED="1548160435501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_handle_unknown_errords.coverage" NAME="Unittests for test_encoders.TestEncoders.test_handle_unknown_errords Coverage Results" MODIFIED="1546700095487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_ordinal_TestOrdinalEncoder_test_ordinal.coverage" NAME="Unittests for test_ordinal.TestOrdinalEncoder.test_ordinal Coverage Results" MODIFIED="1553156998133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_ids_small_js.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_ids_small_js Coverage Results" MODIFIED="1547124576538" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_small_samples_lor.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_small_samples_lor Coverage Results" MODIFIED="1547143817716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_gauss_TestGaussEncoder_test_zero_variance.coverage" NAME="Unittests for test_gauss.TestGaussEncoder.test_zero_variance Coverage Results" MODIFIED="1547142694743" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_helpers_TestHelpers_test_is_numeric_pandas.coverage" NAME="Unittests for test_helpers.TestHelpers.test_is_numeric_pandas Coverage Results" MODIFIED="1553164493971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_binary_TestBinaryEncoder_test_binary_return_missing_in_column_transformer.coverage" NAME="Unittests for test_binary.TestBinaryEncoder.test_binary_return_missing_in_column_transformer Coverage Results" MODIFIED="1553161059562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$pytest_in_tests.coverage" NAME="pytest in tests Coverage Results" MODIFIED="1546529891449" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_helpers_TestHelpers.coverage" NAME="Unittests for test_helpers.TestHelpers Coverage Results" MODIFIED="1553164339032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_column_transformer.coverage" NAME="Unittests for test_encoders.TestEncoders.test_column_transformer Coverage Results" MODIFIED="1553163702694" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_handle_missing_return_nan.coverage" NAME="Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan Coverage Results" MODIFIED="1555505358063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_proof.coverage" NAME="Unittests for test_encoders.TestEncoders.test_proof Coverage Results" MODIFIED="1547128095057" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$adfs.coverage" NAME="adfs Coverage Results" MODIFIED="1555860303965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_proofd.coverage" NAME="Unittests for test_encoders.TestEncoders.test_proofd Coverage Results" MODIFIED="1547284417403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_cat_boost_TestBinaryEncoder.coverage" NAME="Unittests for test_cat_boost.TestBinaryEncoder Coverage Results" MODIFIED="1548349862762" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_truncated_index.coverage" NAME="Unittests for test_encoders.TestEncoders.test_truncated_index Coverage Results" MODIFIED="1549878126311" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_tmp_column_name.coverage" NAME="Unittests for test_encoders.TestEncoders.test_tmp_column_name Coverage Results" MODIFIED="1549886443654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_asd.coverage" NAME="Unittests for test_encoders.TestEncoders.test_asd Coverage Results" MODIFIED="1550571625236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_string_index.coverage" NAME="Unittests for test_encoders.TestEncoders.test_string_index Coverage Results" MODIFIED="1554893213557" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$pytest_for_test_encoders_TestEncoders_test_string_index.coverage" NAME="pytest for test_encoders.TestEncoders.test_string_index Coverage Results" MODIFIED="1546530423326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_get_feature_names_drop_invariant.coverage" NAME="Unittests for test_encoders.TestEncoders.test_get_feature_names_drop_invariant Coverage Results" MODIFIED="1549886645986" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$Unittests_for_test_encoders_TestEncoders_test_types.coverage" NAME="Unittests for test_encoders.TestEncoders.test_types Coverage Results" MODIFIED="1548350324300" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/category_encoders/tests" />
+    <SUITE FILE_PATH="coverage/categorical_encoding_vanilla$catboost_comparison.coverage" NAME="catboost_comparison Coverage Results" MODIFIED="1547976996109" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/examples/benchmarking_large" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="316" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1629395185">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.0" value="4" />
+          <entry key="project.open.time.1" value="9" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.12" value="3" />
+          <entry key="project.open.time.13" value="2" />
+          <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.70" value="1" />
+          <entry key="project.opened" value="26" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="cfg" value="2" />
+          <entry key="csv" value="2" />
+          <entry key="md" value="1" />
+          <entry key="py" value="188" />
+          <entry key="sh" value="5" />
+          <entry key="txt" value="2" />
+          <entry key="yml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Bash" value="5" />
+          <entry key="CSV" value="2" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="8" />
+          <entry key="Python" value="188" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="845" />
+          <entry key="dummy" value="48" />
+          <entry key="md" value="336" />
+          <entry key="py" value="21007" />
+          <entry key="txt" value="515" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Markdown" value="336" />
+          <entry key="PLAIN_TEXT" value="563" />
+          <entry key="Python" value="21852" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/category_encoders/target_encoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="243" column="21" selection-start-line="243" selection-start-column="8" selection-end-line="243" selection-end-column="21" />
+              <folding>
+                <element signature="e#482#3872#0" expanded="true" />
+                <element signature="e#3917#6111#0" expanded="true" />
+                <element signature="e#6162#7092#0" expanded="true" />
+                <element signature="e#7164#9055#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/category_encoders/ordinal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-92">
+              <caret line="38" column="40" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="40" />
+              <folding>
+                <element signature="e#9833#11996#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_encoders.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="213">
+              <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+              <folding>
+                <element signature="e#0#14#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/category_encoders/tests/helpers.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
+              <folding>
+                <element signature="e#162#342#0" expanded="true" />
+                <element signature="e#408#859#0" expanded="true" />
+                <element signature="e#928#2781#0" expanded="true" />
+                <element signature="e#2828#2954#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>mod.loc[X[col]]</find>
+      <find>m-probability</find>
+      <find>test_ty</find>
+      <find>type</find>
+      <find>check_es§</find>
+      <find>typ</find>
+      <find>mean</find>
+      <find>encoder_name in</find>
+      <find>WOEE</find>
+      <find>inver</find>
+      <find>trunca</find>
+      <find>test_string_index</find>
+      <find>test_helpers</find>
+      <find>self.assertTrue(result.index == [2, 3, 4])</find>
+      <find>conver</find>
+      <find>convert_</find>
+      <find>LeaveOn</find>
+      <find>inverse_transform is not supported because transfor</find>
+      <find>119</find>
+      <find>řš</find>
+      <find>convert_in</find>
+      <find>catch_wa</find>
+      <find>record=True</find>
+      <find>print</find>
+      <find>pdb</find>
+      <find>test_inverse_transform_BothFieldsAreReturnNanWithNan_ExpectValueError</find>
+      <find>handle_missing</find>
+      <find>asse</find>
+      <find>all</find>
+      <find>hashi</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>np.testing.assert_array_equal(result.index, [2, 3, 4])</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/category_encoders</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/category_encoders/one_hot.py" />
+        <option value="$PROJECT_DIR$/category_encoders/basen.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/report_history.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_gauss.py" />
+        <option value="$PROJECT_DIR$/category_encoders/gauss.py" />
+        <option value="$PROJECT_DIR$/category_encoders/log_odds_ratio.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_james_stein.py" />
+        <option value="$PROJECT_DIR$/category_encoders/target_encoder_v2.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/dummy.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/util.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/arff_loader.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/hie_example.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/hierarchical.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/catboost_comparison.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_cat_boost.py" />
+        <option value="$PROJECT_DIR$/category_encoders/leave_one_out_v2.py" />
+        <option value="$PROJECT_DIR$/category_encoders/ordinal.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_target_encoder.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_woe.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_leave_one_out.py" />
+        <option value="$PROJECT_DIR$/category_encoders/backward_difference.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_utils.py" />
+        <option value="$PROJECT_DIR$/category_encoders/cat_boost.py" />
+        <option value="$PROJECT_DIR$/category_encoders/utils.py" />
+        <option value="$PROJECT_DIR$/category_encoders/leave_one_out.py" />
+        <option value="$PROJECT_DIR$/category_encoders/m_estimate.py" />
+        <option value="$PROJECT_DIR$/category_encoders/woe.py" />
+        <option value="$PROJECT_DIR$/category_encoders/james_stein.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_one_hot.py" />
+        <option value="$PROJECT_DIR$/CHANGELOG.md" />
+        <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_basen.py" />
+        <option value="$PROJECT_DIR$/category_encoders/__init__.py" />
+        <option value="$PROJECT_DIR$/examples/benchmarking_large/benchmarking_large.py" />
+        <option value="$PROJECT_DIR$/category_encoders/target_encoder.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/asd.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_ordinal.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_binary.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_helpers.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/helpers.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/ad.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/test_encoders.py" />
+        <option value="$PROJECT_DIR$/category_encoders/tests/adfs.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="812" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="categorical-encoding vanilla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="categorical-encoding vanilla" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="categorical-encoding vanilla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="categorical-encoding vanilla" type="462c0819:PsiDirectoryNode" />
+              <item name="category_encoders" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="categorical-encoding vanilla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="categorical-encoding vanilla" type="462c0819:PsiDirectoryNode" />
+              <item name="category_encoders" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="categorical-encoding vanilla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="categorical-encoding vanilla" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="categorical-encoding vanilla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="categorical-encoding vanilla" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="benchmarking_large" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/category_encoders/tests" />
+      <recent name="$PROJECT_DIR$/category_encoders" />
+      <recent name="$PROJECT_DIR$/examples/benchmarking_large" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for test_encoders.TestEncoders.test_classification">
+    <configuration name="adfs" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="categorical-encoding vanilla" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/category_encoders/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/category_encoders/tests/adfs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_encoders.TestEncoders.test_classification" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="categorical-encoding vanilla" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/category_encoders/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_encoders.TestEncoders.test_classification&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="categorical-encoding vanilla" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/category_encoders/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_encoders.TestEncoders.test_handle_missing_return_nan&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_encoders.TestEncoders.test_nsfdp" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="categorical-encoding vanilla" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/category_encoders/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_encoders.TestEncoders.test_nsfdp&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_encoders.TestEncoders.test_proofd" type="tests" factoryName="Unittests" nameIsGenerated="true">
+      <module name="categorical-encoding vanilla" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/category_encoders/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_pattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_encoders.TestEncoders.test_proofd&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_encoders.TestEncoders.test_string_index" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="categorical-encoding vanilla" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/category_encoders/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_encoders.TestEncoders.test_string_index&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_proofd" />
+      <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_string_index" />
+      <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_nsfdp" />
+      <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan" />
+      <item itemvalue="Python.adfs" />
+      <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_classification" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_classification" />
+        <item itemvalue="Python.adfs" />
+        <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan" />
+        <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_nsfdp" />
+        <item itemvalue="Python tests.Unittests for test_encoders.TestEncoders.test_string_index" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d33082c-8f7d-4303-9567-3053533b61eb" name="Default Changelist" comment="" />
+      <changelist id="" name="clipboardPatchFile" comment="" />
+      <created>1546529617500</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546529617500</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Update documentation in OneHotEncoder and remove warning in BasenNEncoder">
+      <created>1546531092174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1546531092174</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Make one assert more meaningful">
+      <created>1546596909274</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546596909274</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update large benchmark">
+      <created>1546701236428</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1546701236428</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add new target encoders">
+      <created>1546701634929</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1546701634930</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add James-Stein estimator">
+      <created>1547117997039</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1547117997039</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fix edge scenarios">
+      <created>1547144014056</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1547144014056</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merge James-Stein estimators together">
+      <created>1547291850088</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1547291850088</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Add beta model into James-Stein estimator">
+      <created>1547991314677</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547991314679</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add CatBoost encoder">
+      <created>1548350425707</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1548350425707</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add test_truncated_index">
+      <created>1549878184011</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1549878184013</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Support Numpy arrays as target columns #155">
+      <created>1549886999727</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1549886999727</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Fix non-ascii apostrophe">
+      <created>1549887705648</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1549887705648</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fix non-ascii character">
+      <created>1549888150816</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1549888150816</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fix the last remaining non-ascii character">
+      <created>1549889342367</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1549889342367</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Debug Travis CI">
+      <created>1549979007249</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1549979007249</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Preparations for release 2.0.0">
+      <created>1549980014245</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1549980014245</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Alter invariant scenario">
+      <created>1551100699469</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1551100699469</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_nsfdp - 2019.04.17 at 14h 47m 44s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_nsfdp" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_handle_missing_return_nan - 2019.04.17 at 14h 48m 02s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_handle_missing_return_nan - 2019.04.17 at 14h 49m 10s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_handle_missing_return_nan - 2019.04.17 at 14h 49m 17s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_handle_missing_return_nan" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_classification - 2019.04.23 at 10h 10m 10s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_classification" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_classification - 2019.04.23 at 10h 10m 54s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_classification" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_classification - 2019.04.23 at 10h 12m 29s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_classification" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_classification - 2019.04.23 at 10h 12m 43s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_classification" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_classification - 2019.04.23 at 10h 21m 26s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_classification" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_for_test_encoders_TestEncoders_test_classification - 2019.04.23 at 10h 21m 39s.xml">
+      <configuration name="Unittests for test_encoders.TestEncoders.test_classification" configurationId="tests" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25299507" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info id="SciView" order="3" weight="0.41296688" />
+      <window_info id="Database" order="4" weight="0.32980973" />
+      <window_info id="JuliaSciView" order="5" weight="0.32956952" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32871014" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.38191634" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49964765" weight="0.39406207" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32871014" />
+      <window_info anchor="bottom" id="Mypy Terminal" order="7" />
+      <window_info anchor="bottom" id="GitHub Reviews" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5003524" side_tool="true" weight="0.39528432" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3293124" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32810616" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.3297568" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update documentation in OneHotEncoder and remove warning in BasenNEncoder" />
+    <MESSAGE value="Make one assert more meaningful" />
+    <MESSAGE value="Update large benchmark" />
+    <MESSAGE value="Add new target encoders" />
+    <MESSAGE value="Add James-Stein estimator" />
+    <MESSAGE value="Fix edge scenarios" />
+    <MESSAGE value="Merge James-Stein estimators together" />
+    <MESSAGE value="Add beta model into James-Stein estimator" />
+    <MESSAGE value="Add CatBoost encoder" />
+    <MESSAGE value="Add test_truncated_index" />
+    <MESSAGE value="Support Numpy arrays as target columns #155" />
+    <MESSAGE value="Fix non-ascii apostrophe" />
+    <MESSAGE value="Fix non-ascii character" />
+    <MESSAGE value="Fix the last remaining non-ascii character" />
+    <MESSAGE value="Debug Travis CI" />
+    <MESSAGE value="Preparations for release 2.0.0" />
+    <MESSAGE value="Alter invariant scenario" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alter invariant scenario" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="python-exception">
+          <properties notifyOnTerminate="true" exception="builtins.RuntimeWarning">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+          <option name="timeStamp" value="9" />
+        </breakpoint>
+        <breakpoint enabled="true" type="python-exception">
+          <properties notifyOnTerminate="true" exception="builtins.DeprecationWarning">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/examples/benchmarking_large/report_history.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/_unittest_backport.py</url>
+          <line>112</line>
+          <option name="timeStamp" value="114" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/estimator_checks.py</url>
+          <line>632</line>
+          <option name="timeStamp" value="115" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/category_encoders/leave_one_out.py</url>
+          <line>268</line>
+          <option name="timeStamp" value="122" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/scipy/spatial/distance.py</url>
+          <line>2754</line>
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/category_encoders/tests/test_ordinal.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="128" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/category_encoders/tests/test_ordinal.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/category_encoders/tests/test_encoders.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="145" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/category_encoders/target_encoder.py</url>
+          <line>178</line>
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/category_encoders/target_encoder.py</url>
+          <line>229</line>
+          <option name="timeStamp" value="149" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>np.random.randint(1,4,np_X.shape[0])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pd.Categorical(y[0])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>pd.Categorical(y)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>y</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(result.columns)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result.columns</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result.shape()[1]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>result.shape()</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>np_X_t.shape[1]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/category_encoders/leave_one_out_v2.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/sklearn/utils/estimator_checks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2023">
+          <caret line="631" column="10" selection-start-line="631" selection-start-column="10" selection-end-line="631" selection-end-column="49" />
+          <folding>
+            <element signature="e#10890#12229#0" expanded="true" />
+            <element signature="e#78130#79451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_woe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="49" selection-start-line="2" selection-start-column="49" selection-end-line="2" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_leave_one_out.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/cat_boost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1312">
+          <caret line="194" column="67" selection-start-line="194" selection-start-column="67" selection-end-line="194" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/m_estimate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="209" column="66" selection-start-line="209" selection-start-column="66" selection-end-line="209" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/james_stein.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6936">
+          <caret line="588" lean-forward="true" selection-start-line="588" selection-end-line="588" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/leave_one_out.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1338">
+          <caret line="189" column="67" selection-start-line="189" selection-start-column="67" selection-end-line="189" selection-end-column="67" />
+          <folding>
+            <element signature="e#2926#3472#0" expanded="true" />
+            <element signature="e#3517#5543#0" expanded="true" />
+            <element signature="e#7524#7776#0" expanded="true" />
+            <element signature="e#7839#8026#0" expanded="true" />
+            <element signature="e#8559#10708#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci_scripts/push_doc.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-574" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/benchmarking_large/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="84" column="22" selection-start-line="84" selection-start-column="22" selection-end-line="84" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci_scripts/success.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci_scripts/test.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_basen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" selection-start-line="8" selection-end-line="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/backward_difference.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="123" column="33" selection-start-line="123" selection-start-column="33" selection-end-line="123" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_one_hot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="230" column="37" selection-start-line="230" selection-start-column="37" selection-end-line="230" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/warnings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="441" column="8" selection-start-line="441" selection-start-column="8" selection-end-line="441" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/benchmarking/benchmarking.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/basen.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2108">
+          <caret line="289" column="39" selection-start-line="289" selection-start-column="39" selection-end-line="289" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/binary.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/scipy/spatial/distance.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12104">
+          <caret line="2758" column="40" selection-start-line="2758" selection-start-column="40" selection-end-line="2758" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-502983299/scipy/spatial/_distance_wrap.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="99" selection-start-line="2" selection-start-column="99" selection-end-line="2" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/benchmarking_large/benchmarking_large.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="26" column="93" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2018.2/python_stubs/-502983299/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="352" column="4" selection-start-line="352" selection-start-column="4" selection-end-line="352" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/asd.py" />
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_ordinal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="45" />
+          <folding>
+            <element signature="e#614#925#0" expanded="true" />
+            <element signature="e#610#1529#0" expanded="true" />
+            <element signature="e#6350#6949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/core/frame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="335" selection-start-line="335" selection-end-line="335" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_helmert.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/pandas/util/testing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="292" selection-start-line="292" selection-end-line="292" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/hashing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/woe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding>
+            <element signature="e#1015#1571#0" expanded="true" />
+            <element signature="e#1614#3584#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ci_scripts/install.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-177" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="12" lean-forward="true" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/setup.cfg">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_binary.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="54" column="48" selection-start-line="54" selection-start-column="48" selection-end-line="54" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#1094#1878#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/ad.py" />
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_target_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages/unittest2/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/target_encoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="243" column="21" selection-start-line="243" selection-start-column="8" selection-end-line="243" selection-end-column="21" />
+          <folding>
+            <element signature="e#482#3872#0" expanded="true" />
+            <element signature="e#3917#6111#0" expanded="true" />
+            <element signature="e#6162#7092#0" expanded="true" />
+            <element signature="e#7164#9055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/test_encoders.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="24" column="22" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/adfs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/tests/helpers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#162#342#0" expanded="true" />
+            <element signature="e#408#859#0" expanded="true" />
+            <element signature="e#928#2781#0" expanded="true" />
+            <element signature="e#2828#2954#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/category_encoders/ordinal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="40" />
+          <folding>
+            <element signature="e#9833#11996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
